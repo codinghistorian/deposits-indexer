@@ -1,0 +1,5 @@
+type Account @entity {
+  id: ID!
+  totalDeposits: BigInt!
+  maxDeposits: BigInt!
+}

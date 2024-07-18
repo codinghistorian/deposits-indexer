@@ -1,0 +1,22 @@
+{
+    "name": "deposits-indexer",
+    "version": "1.0.0",
+    "license": "AGPL 3.0",
+    "scripts": {
+        "codegen": "graph codegen",
+        "build": "graph build",
+        "test": "graph test",
+        "create:xinfin": "graph create --node https://graph.xinfin.fathom.fi/ fathomProtocol/foundation-vault",
+        "remove:xinfin": "graph remove --node https://graph.xinfin.fathom.fi/ fathomProtocol/foundation-vault",
+        "deploy:xinfin": "graph deploy --node https://graph.xinfin.fathom.fi/ --version-label v0.0.1 fathomProtocol/foundation-vault subgraph.yaml",
+    },
+    "dependencies": {
+        "@graphprotocol/graph-cli": "^0.78.0",
+        "@graphprotocol/graph-ts": "^0.35.1"
+    },
+    "devDependencies": {
+        "@types/node": "^14.0.13",
+        "mustache": "^4.2.0",
+        "typescript": "^3.9.3"
+    }
+}
