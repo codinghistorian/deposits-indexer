@@ -5,10 +5,7 @@
     "scripts": {
         "codegen": "graph codegen",
         "build": "graph build",
-        "test": "graph test",
-        "create:xinfin": "graph create --node https://graph.xinfin.fathom.fi/ fathomProtocol/foundation-vault",
-        "remove:xinfin": "graph remove --node https://graph.xinfin.fathom.fi/ fathomProtocol/foundation-vault",
-        "deploy:xinfin": "graph deploy --node https://graph.xinfin.fathom.fi/ --version-label v0.0.1 fathomProtocol/foundation-vault subgraph.yaml",
+        "test": "graph test"
     },
     "dependencies": {
         "@graphprotocol/graph-cli": "^0.78.0",
