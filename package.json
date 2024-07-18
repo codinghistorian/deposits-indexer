@@ -5,7 +5,11 @@
     "scripts": {
         "codegen": "graph codegen",
         "build": "graph build",
-        "test": "graph test"
+        "test": "graph test",
+        "create:k8s:xinfin": "graph create --node http://xinfin-graph-node-service:8020/ deposits-indexer",
+        "remove:k8s:xinfin": "graph remove --node http://xinfin-graph-node-service:8020/ deposits-indexer",
+        "deploy:k8s:xinfin": "graph deploy --node http://xinfin-graph-node-service:8020/ --ipfs http://ipfs-service:5001 --version-label v0.0.1 deposits-indexer",
+        "prep:xinfin:prod": "graph codegen && graph build"
     },
     "dependencies": {
         "@graphprotocol/graph-cli": "^0.78.0",
