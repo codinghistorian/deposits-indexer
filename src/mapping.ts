@@ -8,9 +8,11 @@ export function handleDeposit(event: Deposit): void {
   if (account == null) {
     account = new Account(event.params.owner.toHex())
     account.totalDeposits = BigInt.fromI32(0)
+    account.maxDeposits = BigInt.fromI32(0)  // Ensure `maxDeposits` is initialized
   }
 
   account.totalDeposits = account.totalDeposits.plus(event.params.assets)
+  
   if (account.totalDeposits.gt(account.maxDeposits)) {
     account.maxDeposits = account.totalDeposits
   }
